@@ -83,8 +83,8 @@ python bilibili_auto.py config --cookie "你的Cookie"
 | `启动下载.bat` | Windows 一键启动 |
 | `decord-*-win_amd64.whl` | decord 离线依赖 (Windows) |
 | `decord-*-manylinux*.whl` | decord 离线依赖 (Linux) |
-| `numpy-*-manylinux*.whl` | numpy 离线依赖 (Linux PyPy) |
-| `pillow-*-manylinux*.whl` | pillow 离线依赖 (Linux PyPy) |
+| `numpy-*-cp311-*.whl` | numpy 离线依赖 (Linux CPython 3.11) |
+| `pillow-*-cp311-*.whl` | pillow 离线依赖 (Linux CPython 3.11) |
 
 ---
 

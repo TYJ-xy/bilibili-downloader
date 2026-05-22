@@ -100,6 +100,33 @@ pip install decord pillow
 
 ---
 
+## OpenClaw Farm 上传（10MB 文件限制）
+
+OpenClaw Farm 上传文件时有 **10MB 单文件上限**。超过 10MB 的 wheel 需要分卷压缩后再上传：
+
+```bash
+# 1. 分卷压缩（每卷 9MB，留余量）
+zip -s 9m vendor.zip decord-*.whl numpy-*.whl pillow-*.whl
+
+# 生成：vendor.z01, vendor.z02, vendor.zip
+
+# 2. 上传所有分卷到 OpenClaw Farm
+# 3. 在 Farm 环境中解压：
+zip -s 0 vendor.zip --out vendor_merged.zip
+unzip vendor_merged.zip
+
+# 4. 安装
+pip install decord-*.whl numpy-*.whl pillow-*.whl
+```
+
+| 文件 | 大小 | 需分卷 |
+|------|------|:--:|
+| `pillow-*.whl` | 6.8MB | — |
+| `decord-*.whl` | 13MB | ✅ |
+| `numpy-*.whl` | 17MB | ✅ |
+
+---
+
 ## 技术实现
 
 - **搜索**：B站 API `x/web-interface/search/all/v2`

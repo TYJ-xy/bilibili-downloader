@@ -16,13 +16,7 @@
 4. 输入 UP 主名称 → 选择模式 → 开始下载
 ```
 
-### 方式二：命令行
-
-```bash
-python bilibili_auto.py auto "UP主名" --mode video --limit 5 --quality 80
-```
-
-### 方式三：Agent 对话
+### 方式二：Agent 对话
 
 将 `SKILL.md` 发给 OpenClaw / Hermes Agent，Agent 自动创建 skill 后可直接对话使用：
 

@@ -1,0 +1,3 @@
+# Local config and temp files only
+__pycache__/
+*.pyc

@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+vendor/
+*.mp3
+*.mp4
+*.m4s
+*.srt
+*.txt
+*.jpg
+*.whl
+!requirements.txt
+!README.md
+.DS_Store
+.first_run
+bilibili_config.json

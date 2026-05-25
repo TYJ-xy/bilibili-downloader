@@ -1,0 +1,11 @@
+# B站下载器依赖
+# 基础依赖
+httpx>=0.24
+tqdm>=4.60
+moviepy>=1.0  # 视频合并备用
+
+# Whisper降级策略依赖  
+faster-whisper>=1.0
+ctranslate2>=4.0
+huggingface-hub>=0.21
+tokenizers>=0.20
